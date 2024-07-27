@@ -1,13 +1,61 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;700&display=swap");
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+::selection {
+  color: var(--pink);
+  background: var(--black);
+}
+:root {
+  --pink: #feecec;
+  --black: #404040;
+  --dark-red: #493737;
+}
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pink);
+  color: var(--black);
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#reaction {
+  font-size: 128px;
+}
+#question {
+  padding: 20px 0;
+  font-size: 50px;
+}
+@media (max-width: 450px) {
+  #reaction {
+    font-size: 75px;
+  }
+  #question {
+    font-size: 20px;
+  }
+}
+.button-container {
+  display: flex;
+  gap: 25px;
+}
+#yes,
+#no {
+  user-select: none;
+  font-size: 15px;
+  padding: 7px 12px;
+  border-radius: 5px;
+  background-color: var(--dark-red);
+  color: var(--pink);
+  border: none;
+  cursor: pointer;
 }
